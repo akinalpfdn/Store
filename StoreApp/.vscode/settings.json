@@ -1,0 +1,20 @@
+{
+    "html.format.contentUnformatted": "",
+    "html.format.extraLiners": "",
+    "editor.codeActionsOnSave": {
+
+
+    },
+    "files.associations": {
+        "*.cshtml": "aspnetcorerazor"
+      },
+      "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "vue-html": "html",
+        "razor": "html",
+        "plaintext": "jade",
+        "aspnetcorerazor": "html"
+    },
+      "emmet.triggerExpansionOnTab": true,
+"emmet.useInlineCompletions": true
+}
