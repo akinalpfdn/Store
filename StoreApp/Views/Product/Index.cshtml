@@ -1,24 +1,15 @@
+
+
+@section Footer{
+    <div>
+        Only For Index Footer
+    </div>
+}
 @model List<StoreApp.Models.Product>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+    
+            <div class="row my-3">
         @foreach (StoreApp.Models.Product prd in Model)
         {
-            <div>
-                <h3>@prd.ProductName</h3>
-                <p>@prd.Price</p>
-                <p>
-                    <a href="Product/get/@prd.ProductId">Get Details</a>
-                </p>
-            </div>
+            <partial name="_ProductCard" model="@prd"/>
         }
-</body>
-
-</html>
+            </div>

@@ -12,6 +12,7 @@ builder.Services.AddDbContext<RepositoryContext>(options =>{
 #endregion
 var app = builder.Build();
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseRouting();
 app.MapControllerRoute("default","{controller=Home}/{action=Index}/{id?}");
 app.Run();

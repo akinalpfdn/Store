@@ -1,4 +1,4 @@
-@model StoreApp.Models.Product
+@model Product
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +10,13 @@
 <body>
     <h3>@Model.ProductName</h3>
     <p>@Model.Price</p>
-    <a href="/Product">Products</a>
+    <div class="btn-group">
+        <a class="btn btn-primary" asp-action="Index" asp-controller="Home">
+            <i class="fa-solid fa-house"></i>
+            Home</a>
+        <a class="btn btn-outline-primary " asp-action="Index" asp-controller="Product">
+            <i class="fa-solid fa-list"></i>
+            Products</a>
+    </div>
 </body>
 </html>
