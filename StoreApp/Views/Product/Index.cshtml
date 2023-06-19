@@ -5,10 +5,10 @@
         Only For Index Footer
     </div>
 }
-@model List<StoreApp.Models.Product>
+@model List<Product>
     
             <div class="row my-3">
-        @foreach (StoreApp.Models.Product prd in Model)
+        @foreach (Product prd in Model)
         {
             <partial name="_ProductCard" model="@prd"/>
         }

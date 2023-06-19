@@ -1,6 +1,7 @@
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using StoreApp.Models;
+using Repositories;
 
 namespace StoreApp.Controllers
 {
@@ -24,9 +25,9 @@ namespace StoreApp.Controllers
                 new DbContextOptionsBuilder<RepositoryContext>()
                 .UseSqlite("Data Source = C:\\sqlite3\\MVC\\ProductDb.db").Options);
                 */
-           // return _context.Products;
-           var model = _context.Products.ToList();
-           return View(model);
+            // return _context.Products;
+            var model = _context.Products.ToList();
+            return View(model);
         }
 
         public IActionResult Get(int id)
