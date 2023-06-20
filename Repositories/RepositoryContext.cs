@@ -6,6 +6,7 @@ namespace Repositories
     public class RepositoryContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }//Bu kisim olmazsa tablo Category olarak adlandirilir, tablo isimlendirmesini degistiriyoruz
 
         public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options)
         {
@@ -23,6 +24,12 @@ namespace Repositories
                     new Product() { ProductId = 4, ProductName = "Speaker", Price = 5_000 },
                     new Product() { ProductId = 5, ProductName = "Microphone", Price = 1_000 }
                 );
+
+            modelBuilder.Entity<Category>()
+               .HasData(
+                   new Category() { CategoryId = 1, CategoryName = "Book" },
+                   new Category() { CategoryId = 2, CategoryName = "Electronic" }
+               );
         }
         ///cmdde yazilan kodlar:
         //dotnet ef migrations add init sqlin olusmasi icin ilgili scriptleri hazirliyor
