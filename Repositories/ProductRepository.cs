@@ -7,6 +7,8 @@ namespace Repositories
         public ProductRepository(RepositoryContext context) : base(context)
         {
         }
+        //Bu noktada create methodunu repositoryBase kisminda tanimladik, o yuzden direkt o methodu kullanabiliriz
+        public void CreateProduct(Product product) => Create(product);
 
         public IQueryable<Product> GetAllProducts(bool trackChanges) => FindAll(trackChanges);
 

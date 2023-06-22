@@ -1,0 +1,40 @@
+@model Product
+<div
+  class="text-center"
+  style="max-width: 70%; align-self: center; margin: auto"
+>
+  <div class="display-6">EE OLURRRR</div>
+
+  <form method="post" asp-action="Create">
+    <div class="form-group my-3">
+      <label asp-for="ProductName"></label>
+      <input
+        asp-for="ProductName"
+        class="form-control"
+        type="text"
+        placeholder="Enter a Product Name"
+      />
+    </div>
+    <div class="form-group my-3">
+      <label asp-for="Price"></label>
+      <input
+        asp-for="Price"
+        class="form-control"
+        type="text"
+        placeholder="Enter a Price"
+      />
+    </div>
+    <div class="form-group my-3">
+        <div class="">
+      <button class="btn btn-primary mx-3" type="submit">
+        <i class="fa fa-save"></i>
+        Save
+      </button>
+      <a asp-action="Index" class="btn btn-outline-warning mx-3" >
+        <i class="fa fa-cancel"></i>
+        Back</a>
+      </div>
+    </div>
+  </form>
+</div>
+
